@@ -36,12 +36,3 @@ class CoupangAPI:
         pretty_json = json.dumps(response.json(), indent=2, ensure_ascii=False)
         print(pretty_json)
         return response.json().get('data')
-
-
-# 사용 예시
-# ACCESS_KEY = 'd7ab7d46-cf55-43aa-b211-9a214a5794e8'
-# SECRET_KEY = '3216826401c1ea082e3262aeb7a50196865dfafc'
-#
-# coupang_api = CoupangAPI(ACCESS_KEY, SECRET_KEY)
-# data = coupang_api.get_cps_d_agg('20240717', '20240717')
-# print(data)

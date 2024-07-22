@@ -4,14 +4,14 @@ from app.utils.db import db
 class Cps_d_agg(db.Model):
     __tablename__ = 'T_CPS_D_AGG'  # 테이블명 지정
     '''
-- 유저ID
-- 채널ID
-- 수익일자 YYYYMMDD
-- 클릭건수
-- 구매건수
-- 취소건수
-- 총 판매액
-- 총 수익(커미션)
+      - 유저ID
+      - 채널ID
+      - 수익일자 YYYYMMDD
+      - 클릭건수
+      - 구매건수
+      - 취소건수
+      - 총 판매액
+      - 총 수익(커미션)
       "date": "20190307",
       "trackingCode": "AF1234567",
       "subId": "A1234567890",
