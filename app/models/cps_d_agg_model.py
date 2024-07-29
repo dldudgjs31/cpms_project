@@ -21,15 +21,15 @@ class Cps_d_agg(db.Model):
       "cancel": 888,
       "gmv": 8900
     '''
-    usr_id = db.Column(db.Integer, primary_key=True, autoincrement=False)
-    cps_chn_id = db.Column(db.String(50), primary_key=True)
-    cps_sub_id = db.Column(db.String(50), primary_key=True)
+    usr_id = db.Column(db.Integer, primary_key=True)
+    cps_chn_id = db.Column(db.String(50), primary_key=True,comment='쿠팡파트너스ID')
+    cps_sub_id = db.Column(db.String(50), primary_key=True,comment='쿠팡파트너스 서브 채널ID')
     make_dt = db.Column(db.String(8),primary_key=True)
-    click_cnt = db.Column(db.Integer,default=0)
-    order_cnt = db.Column(db.Integer,default=0)
-    cancel_cnt = db.Column(db.Integer,default=0)
-    total_amt = db.Column(db.Integer,default=0)
-    total_cms = db.Column(db.Integer,default=0)
+    click_cnt = db.Column(db.Integer, default=0, comment='클릭수')
+    order_cnt = db.Column(db.Integer,default=0, comment='주문수')
+    cancel_cnt = db.Column(db.Integer,default=0, comment='취소수')
+    total_amt = db.Column(db.Integer,default=0, comment='판매액')
+    total_cms = db.Column(db.Integer,default=0, comment='수수료')
     ins_day = db.Column(db.DateTime, default=datetime.utcnow)
     upt_day = db.Column(db.DateTime)
     del_day = db.Column(db.DateTime)
